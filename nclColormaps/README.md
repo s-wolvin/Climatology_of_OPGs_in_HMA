@@ -10,7 +10,7 @@
 
 *colormapName*('Total', 10) -- Pull 10 total colors, evenly spaced within the list of colors. <br />
 
-#### Total List of Arguments
+#### Total List of Arguments:
 Reverse - Boolean:      Value to Indicate if Colormap will be Reversed <br />
 Start   - Integer:      Start Index Value <br />
 End     - Integer:      End Index Value <br />
@@ -19,5 +19,5 @@ Step    - Integer:      Step Index Value <br />
 Total   - Integer:      Total Number of Colors Evenly Distributed <br />
 Repeat  - Integer:      Number of times to repeat a color value <br />
 
-## A full list of NCL colormaps can be accessed at: <br />
+## A Full List of NCL Colormaps Can Be Accessed At: <br />
 https://www.ncl.ucar.edu/Document/Graphics/color_table_gallery.shtml
