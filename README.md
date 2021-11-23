@@ -16,4 +16,15 @@ https://www.ncl.ucar.edu/Document/Graphics/color_table_gallery.shtml
 
 ## curveFitting
 
+## hierarchicalClustering
+### agglomerative
+
+### agglomerative_spatiallyConstrained
+
+## timeseries
+
+## correlation
+
+
+
 
