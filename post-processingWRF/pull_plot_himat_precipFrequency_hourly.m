@@ -3,6 +3,8 @@
 % edited: Nov. 24th, 2021
 
 % SUMMARY
+% Pulls precipitation data from HiMAT model output and plots the frequency 
+% of total and different precipiation rates at each hour
 
 % INPUT
 % wrf_dir -     directory holding the WRF output files
@@ -11,6 +13,15 @@
 % yr_final -    final year of the WRF output files
 
 % OUTPUT
+% plot_prcntOfPrecip_YR_INITIAL_YR_FINAL.png - plot of the percentage of
+% total precipitation that occurs at each hour of all mountainous
+% gridpoints
+
+% plot_freqencyOfPrecip_YR_INITIAL_YR_FINAL.png - plot of the percentage of
+% precipiation at different rainfall rates that occurs at each hour of all 
+% mountainous gridpoints
+
+
 
 
 %% clear workspace

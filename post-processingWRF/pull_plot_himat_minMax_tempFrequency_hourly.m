@@ -3,6 +3,8 @@
 % edited: Nov. 24th, 2021
 
 % SUMMARY
+% Pulls temperature data from HiMAT model output and plots the frequency of
+% minimum and maximum temperatures at each hour
 
 % INPUT
 % wrf_dir       - Directory holding the WRF output files
