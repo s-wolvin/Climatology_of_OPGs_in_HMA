@@ -11,7 +11,7 @@ Folder containing NCL Colormaps converted into MATLAB files to be used in MATLAB
 https://www.ncl.ucar.edu/Document/Graphics/color_table_gallery.shtml
 
 ## post-processingWRF
-Scripts created to pull varibles from the HiMAT WRF Model NC file output.
+Scripts created to pull varibles from the HiMAT WRF Model output in .nc files and saves it as a .mat file.
 
 ## facetingAlgorithm
 
