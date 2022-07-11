@@ -1,4 +1,4 @@
-# UofU_HiMAT_statisticalDownscaling
+# UofU_HiMAT_2020-22
 This repository stores the most useful programs created during my Masters Thesis Research at the University of Utah, funded by NASA's High Mountian Asia Team (HiMAT). <br /> <br />
 #### Many of these scripts require the following datasets/open-source code. <br />
 Country Borders from Natural Earth: <br />
