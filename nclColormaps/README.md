@@ -1,7 +1,7 @@
 # NCL Colormaps
-#### This folder contains many of the NCL colormaps found online, converted into MATLAB code. The entire colormap can be accessed by using the function name. <br />
+#### This folder contains many of the NCL colormaps found on the UCAR NCL webpage, converted into MATLAB code. The entire colormap can be accessed by using the function name. <br />
 *colormapName()*  <br /> <br />
-#### The starting index, ending index, step size, whether the colormap is revesed, the total values, etc. can be called upon by the function. For example: <br />
+#### The starting index, ending index, step size, indicies to skip, indicies to repeat, whether the colormap is revesed, the total values, etc. can be called upon by the function. For example: <br />
 *colormapName*('Start', 40) -- Include every color starting at index 40.
 
 *colormapName*('End', 100, 'Reverse', true) -- Pull the first 100 colors, then reverse the order of the colors.
