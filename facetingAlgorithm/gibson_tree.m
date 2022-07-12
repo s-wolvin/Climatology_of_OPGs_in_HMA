@@ -16,7 +16,7 @@ else
             flb(m) = sum(fu(bin==comps(m)))/numel(fu(bin==comps(m))); %%%%%%THIS GOT EDITED numel(bin)
         end
         % true if first direct is adjacent to second or third
-        adj1_23 = facets_is_adjacent(comps,1,[2 3]);
+        adj1_23 = orientation_is_adjacent(comps,1,[2 3]);
 
 
         %% check if (ANY DIRECT IS 50% FLAT) or (DIFF B/W 1&2 IS >
@@ -28,7 +28,7 @@ else
 
         else % check 2 no, goto check 3
             % check if second facet is adjacent to third facet
-            adj2_3 = facets_is_adjacent(comps,2,3);
+            adj2_3 = orientation_is_adjacent(comps,2,3);
 
             % if not 1 adj to 2or3 and not 2 adj to 3
             if ~adj1_23 && ~adj2_3 % check 3 -------------------
@@ -37,8 +37,8 @@ else
 
 
             else % check 3 no, goto check 4
-                adj1_4 = facets_is_adjacent(comps,1,4);
-                adj2_3 = facets_is_adjacent(comps,2,3);
+                adj1_4 = orientation_is_adjacent(comps,1,4);
+                adj2_3 = orientation_is_adjacent(comps,2,3);
 
                 %% if 1 is adj to 4 && 2 adj to 3
                 if adj1_4 && adj2_3 % check 4 -------------------
@@ -70,7 +70,7 @@ else
                 %% if not (1 is adj to 4 && 2 is adj to 3)
                 else % check 4 no, goto check 7
                     % if 2 is adj 3
-                    if facets_is_adjacent(comps,2,3) % check 7 --------------
+                    if orientation_is_adjacent(comps,2,3) % check 7 --------------
                         % if 2 + 3 is greater than 1, set as 2
                         if fracs(2)+fracs(3)>fracs(1) % check 9 ----------------
                             facets(i,j) = comps(2);
@@ -101,7 +101,7 @@ else
 
         %% if 1&2 are adj && 1 is less than 50% flat && 2 is less
         %% than 50% flat, set as 1
-        if facets_is_adjacent(comps,1,2) && flb(1)<0.5 && flb(2)<0.5 % check 10 --------------
+        if orientation_is_adjacent(comps,1,2) && flb(1)<0.5 && flb(2)<0.5 % check 10 --------------
             % check 10 yes --> rule 10
             facets(i,j) = comps(1);
             if outcome; disp('rule 10'); end
@@ -110,10 +110,10 @@ else
         else
             %% if 1 is less than 50% flat && 2 is less than 50% flat
             %% && 1&2 are NOT adj
-            if flb(1)<0.5 && flb(2)<0.5 && ~facets_is_adjacent(comps,1,2) % check 11 ------------------
+            if flb(1)<0.5 && flb(2)<0.5 && ~orientation_is_adjacent(comps,1,2) % check 11 ------------------
                 % check 11 yes, goto check 12
 
-                if facet_sum(comps,fracs,1) > facet_sum(comps,fracs,2) % check 12 ------------
+                if orientation_sum(comps,fracs,1) > orientation_sum(comps,fracs,2) % check 12 ------------
                     facets(i,j) = comps(1);
                     if outcome; disp('rule 11'); end
                 else 
@@ -127,7 +127,7 @@ else
                     % check 13 yes, goto check 14
                     if flb(1)>0.5 % check 14
 
-                        if facet_sum(comps,fracs,2) > fracs(1) % check 15 ---------
+                        if orientation_sum(comps,fracs,2) > fracs(1) % check 15 ---------
                             facets(i,j) = comps(2);
                             if outcome; disp('rule 13'); end
                         else % check 15 no --> rule 14

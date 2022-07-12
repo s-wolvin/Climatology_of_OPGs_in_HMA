@@ -64,7 +64,7 @@ edges   = -180:45:180; % defining bin sizes, this one had 8 bins
 save_dir = '/uufs/chpc.utah.edu/common/home/strong-group4/savanna/wrf_facet_data/';
 
 % set TRUE if you want grid point and test/rule outcome displayed
-outcome = true;
+outcome = false;
 
 
 %% Pull WRF data
