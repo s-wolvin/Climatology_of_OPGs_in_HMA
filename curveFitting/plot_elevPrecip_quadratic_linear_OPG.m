@@ -164,7 +164,7 @@ for dayx = start_dy:end_dy
         
         % Elevation Data for this Facet
         x = elev(use);
-        x1 = [min(x):max(x)];
+        x1 = min(x):max(x);
         x1v2 = (x1-min(x))./1000;
 
         % Scatter Plot of WRF Precipitation
@@ -195,9 +195,12 @@ for dayx = start_dy:end_dy
         if title_options == 1
             title(["Facet " + num2str(fi) + ": " + datestr(t(dayx), 22) ;...
                 "Quadratic AICc = " + string(round(aicc(dayx, fi))) + ", " + "Linear AICc = " + string(round(aicc_lin(dayx, fi)))]);
-        elseif title_options == 2
+        elseif title_options == 2 && (plot_options == 1 || plot_options == 3)
             title({"Facet " + num2str(fi) + ": " + datestr(t(dayx), 22);...
                 "P1 = " + round(p1,2) + ", P2 = " + round(p2,2) + ", P3 = " + round(p3,2)});
+        elseif title_options == 2 && plot_options == 2
+            title({"Facet " + num2str(fi) + ": " + datestr(t(dayx), 22);...
+                "P1 = " + round(ft.p1,2) + ", P2 = " + round(ft.p2,2)});
         elseif title_options == 3
             title("Facet " + num2str(fi) + ": " + datestr(t(dayx), 22));
         end
