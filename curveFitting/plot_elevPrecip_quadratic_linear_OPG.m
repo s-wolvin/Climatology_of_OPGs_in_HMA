@@ -3,25 +3,43 @@
 % Edited: Jul. 21st, 2022
 
 % SUMMARY
-% This code plots the elevation VS precipitation with the gaussian fit 
+% Plot the elevation-precipitation relationship from user-defined facets
+% and dates. The plots can include the WRF precipitation totals, Quadratic
+% OPG best-fit, and Linear OPG best-fit. The Title can include AICc
+% coefficients or the coefficient values. 
 
 % INPUT
-% year -        year of data to plot
-% radius -      desired sampling radius of facet data
-% fnum -        desired facet number
-% start_dy -    the inital day of the year to start plotting
-% wrf_file -    wrf output file for elevation data
-% facet_file -  output files from wrf_facets_MAIN.m
-% precip_file - output files from pull_himat_precip_MAIN.m
-% opg_file -    output files from calc_himat_opg_gauss.m
-% save_dir -    directory to save the figures
+% title_options -   User-decided, do you want the AICc values shown or the
+%                   fit coefficients or not?
+% plot_options -    User-decided, do you want the Quadratic, Linear, Both,
+%                   or none shown?
+% show_options -    User-decided, do you want the plot to be visible or not
+
+% year -            Year of data to plot
+% fnum -            Desired facet number
+% start_dy -        The inital day of the year to start plotting
+% end_dy -          The final day of the year to end plotting
+% radius -          Desired sampling radius of facet data
+% wrf_dir -         Directory of the WRF output data
+% wrf_fnmae -       WRF output file for elevation data
+% facet_dir -       Directory of the facet data
+% facet_fname -     Output files from wrf_facets_MAIN.m
+% opg_dir -         Directory of the OPG coefficients
+% opg_fname_poly -  Output files from calc_himat_opg_quadratic_linear.m;
+%                   the coefficients for the Quadratic Fits
+% opg_fname_lin  -  Output files from calc_himat_opg_quadratic_linear.m;
+%                   the coefficients for the Linear Fits
+% opg_stat_lin -    Output files from calc_himat_opg_quadratic_linear.m;
+%                   the stats file for the Linear Fits
+% opg_stat_qua -    Output files from calc_himat_opg_quadratic_linear.m;
+%                   the stats file for the Quadratic Fits
+% save_dir -        Directory to save to
 
 % OUTPUT
-% opg_(fnum)_(year)-(month)-(day).png - outputs transparent .png file with 
-%                                       a scatter plot of precipitation VS 
-%                                       elevation and a line plot of the
-%                                       Gaussian OPG on top. Plotted for an
-%                                       entire year for a single facet
+% opg_' + num2str(fi) + '_' + datex + '_05Z.png
+% outputs transparent .png file with a scatter plot of precipitation VS 
+% elevation and chosen best-fits. Plotted for an entire year for a single 
+% facet
 
 
 
