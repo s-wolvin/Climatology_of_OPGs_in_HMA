@@ -15,7 +15,6 @@
 % wrf_fnmae -       WRF output file for elevation data
 % facet_dir -       Directory of the facet data
 % facet_fname -     Output files from wrf_facets_MAIN.m
-% opg_dir -         Directory of the OPG coefficients
 % save_dir -        Directory to save to
 
 % OUTPUT
@@ -53,9 +52,6 @@ facet_fname = "wrf_facets_" + radius;
 % precip data
 precip_dir   = "/uufs/chpc.utah.edu/common/home/strong-group4/savanna/precip_wrf/";
 
-% quadratic and linear opg data
-opg_dir          = "/uufs/chpc.utah.edu/common/home/strong-group4/savanna/himat_opg_poly/" + radius + "km/";
-
 % save folder
 save_dir = "/uufs/chpc.utah.edu/common/home/strong-group4/savanna/himat_opg_poly/";
 
@@ -87,10 +83,6 @@ for yr = years
     % Load precip data
     precip_fname = "daily_precip_" + string(yr) + "_24h_05Z.mat";
     load(precip_dir + precip_fname);
-    
-    % Load OPG coefficients
-    opg_fname_poly   = "daily_opg_" + string(yr) + "_" + radius + "km_fitnlm_nov19_bottomElevationZero.mat";
-    load(opg_dir + opg_fname_poly);
 
     fig = figure('Position', [100,100,600,700]);
     
