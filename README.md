@@ -14,6 +14,7 @@ https://www.ncl.ucar.edu/Document/Graphics/color_table_gallery.shtml
 Scripts created to pull varibles from the HiMAT WRF Model output in .nc files and saves it as a .mat file.
 
 ## facetingAlgorithm
+Scripts created to load the terrain data from a WRF output file and facet the terrain (i.e., turn terrain into areas grouped by similar facing orienation, like mountain faces). The faceting algorithm was formulated by Wayne Gibson, Christopher Daly and George Taylor from Oregon State University, Corvallis, Oregon. It is used by the Parameter-elevation Regressions on Independent Slopes Model (PRISM). The algoirthm outlined can be found at https://prism.oregonstate.edu/documents/pubs/1997cac_derivationGrids_daly.pdf
 
 ## curveFitting
 
