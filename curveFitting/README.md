@@ -2,6 +2,9 @@
 ### calc_himat_opg_quadratic_linear.m
 This MATLAB script pulls the precipitation, elevation, and facet data. Fits both a linear and quadratic model to the precipitation-elevation gradinet on each facet. Then saves the fit-coefficients and statistics connected to each fit. These statistics include the p-values to the quadratic coefficients, the AICc and R^2 values for both the quadratic and linear fits. 
 
+### plot_elevPrecip_quad_diffBetweenAvgs.m
+This MATLAB script pulls the precipitation, elevation, and facet data. Then plots a tiles plot illustrating the elevation-precipitation relationship for a single facet, the average precipitation with respect to the area and the elevation of the facet, and the distribution of the grid points by elevation with a histogram.
+
 ### plot_elevPrecip_quadratic_linear_OPG.m
 This MATLAB script pulls the output files from **plot_elevPrecip_quadratic_linear_OPG.m** and the precipitation, elevation, and facet data. Then plots the elevation-precipitation gradient for any user-defined facet/year/day. The plot is customizable, as in, you can add or remove the Quadratic or Linear plots and the title can include the AICc values or coefficient values.
 
