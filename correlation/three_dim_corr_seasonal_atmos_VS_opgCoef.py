@@ -39,10 +39,10 @@
 # save_dir -        Directory to save to
 
 # OUTPUT
-# 'three_dim_lin_regress_' + var_name[poly_var_num] + '_' + wrf_nest + '_' + prdct_name
+# 'three_dim_lin_regress_season_' + var_name[poly_var_num] + '_' + wrf_nest + '_' + prdct_name
 # .mat file which saves the grid point location of the highest correlation 
-# between the OPG coefficient and the atmospheric variable, along with the 
-# linear regression slope, R^2 value, and correlation coefficient
+# between the OPG coefficient and the atmospheric variable (by season), along 
+# with the linear regression slope, R^2 value, and correlation coefficient
 
 
 
