@@ -3,7 +3,9 @@
 % Edited: Jul 21st, 2022
 
 % SUMMARY
-% Plot the pvalues and compare the R^2 values
+% Plot the p-values of a quadratic OPG, compare and plot the AICc values 
+% between the quadratic and linear OPG, compare and plot the R^2 values
+% between the quadratic and linear OPG
 
 % INPUT
 % years -       Years of precipitation data to loop through
