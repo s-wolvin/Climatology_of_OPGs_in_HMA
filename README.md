@@ -1,5 +1,5 @@
-# UofU_HiMAT_2020-22
-This repository stores the most useful programs created during my Masters Thesis Research at the University of Utah, funded by NASA's High Mountian Asia Team (HiMAT). <br /> <br />
+# Climatology of OPGs in HMA
+This repository stores the most useful programs created during my Masters Thesis Research at the University of Utah, funded by NASA's High Mountian Asia Team (HiMAT; Award 80NSSC20K1594). <br /> <br />
 
 # Orographic Precipitation Gradient Downscaling Summary
 
@@ -23,8 +23,8 @@ https://www.eoas.ubc.ca/~rich/map.html
     ├── correlation             #
     ├── curveFitting            # Evaluate, visualize, and quantify the relationship between precipitation and elevation.
     ├── facetingAlgorithm       # Group terrain into facets based on orientation. (Gibson et al. 1997)
-    ├── hierarchicalClustering  #
+    ├── kMeansClustering        # K-Means clustering of OPG coefficients
     ├── nclColormaps            # NCL Colormaps converted into MATLAB files.
-    ├── post-processingWRF      #
-    ├── timeseries              #
+    ├── opgVariability          # Evaluation of the seasonal variability on the Central Himalayan Slope
+    ├── post-processingWRF      # Post-processing the WRF output files
     └── README.md                 
