@@ -19,7 +19,7 @@ https://www.eoas.ubc.ca/~rich/map.html
 
 # Folder Structure
     .
-    ├── correlation             #
+    ├── correlation             # Find atmospheric grid point of highest correlation to OPG
     ├── curveFitting            # Evaluate, visualize, and quantify the relationship between precipitation and elevation.
     ├── facetingAlgorithm       # Group terrain into facets based on orientation. (Gibson et al. 1997)
     ├── kMeansClustering        # K-Means clustering of OPG coefficients
